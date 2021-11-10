@@ -12,7 +12,7 @@ public class EKT_UNESCO_Label
     public String path_en;
     public String label_gr;
     public String label_en;
-    public List<String> mappings;
+    //public List<ProposedTarget> mappings;
 
 
     public EKT_UNESCO_Label(Node el, String uri, /*String path_gr, String path_en,*/ String label_gr, String label_en)
