@@ -22,7 +22,24 @@ public class HttpStuff
     {
         HttpUriRequest request = RequestBuilder.get().setUri(uri)
                 .setHeader(HttpHeaders.ACCEPT, header).build();
-        HttpResponse response = client.execute(request);
+        HttpResponse response = null;
+        try {
+            response = client.execute(request);
+        }catch(Exception whateva)
+        {
+            try {
+                Thread.sleep(1000);
+                response = client.execute(request);
+            } catch (Exception e) {
+                try {
+                    Thread.sleep(10000);
+                    response = client.execute(request);
+                } catch (Exception eee) {
+                    System.err.println("This request insists not to happen");
+                    return null;
+                }
+            }
+        }
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.parse(new InputSource(new StringReader(EntityUtils.toString(response.getEntity()))));

@@ -159,7 +159,14 @@ public class XML_Generator
             }
         }
         //lets now find its path... swimming up to its parents...
-        propTarget = swimUpRec(propTarget);
+        try {
+            propTarget = swimUpRec(propTarget);
+        }catch (NullPointerException eemaaa)
+        {   System.err.println("#####################");
+            System.err.println("#####################");
+            System.err.println("Something went wrong... when swimming to the surface... Aborting...");
+            System.err.println("#####################");
+            System.err.println("#####################");}
         propTarget.title=saveTargetTitle;
         System.out.println(propTarget);
         return propTarget;
