@@ -30,7 +30,12 @@ public class GR_2_EN_Labels
     }
     private void loadGreekJson() throws IOException, ParseException
     {
-        Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH.json");
+        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH.json");
+        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_1.json");
+        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_2.json");
+        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_3.json");
+        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_4.json");
+        Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_5.json");
         //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_TESTTT.json");
         JSONParser jsonParser = new JSONParser();
         JSONArray gr_labels = (JSONArray) jsonParser.parse(readerSubset);

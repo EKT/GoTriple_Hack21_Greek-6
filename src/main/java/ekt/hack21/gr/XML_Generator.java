@@ -45,7 +45,11 @@ public class XML_Generator
         catch (IOException | ParseException e) {e.printStackTrace();}
         catch (ParserConfigurationException e) {e.printStackTrace();}
         catch (SAXException e) {e.printStackTrace();}
-        String XLSXOutput = thisDirectory+"/Mappings.xlsx";
+        //String XLSXOutput = thisDirectory+"/Mappings1.xlsx";
+        //String XLSXOutput = thisDirectory+"/Mappings2.xlsx";
+        //String XLSXOutput = thisDirectory+"/Mappings3.xlsx";
+        //String XLSXOutput = thisDirectory+"/Mappings4.xlsx";
+        String XLSXOutput = thisDirectory+"/Mappings5.xlsx";
         //String XLSXOutput = thisDirectory+"/MappingsSmall.xlsx";
         try {
             generateXML(XLSXOutput);
@@ -90,6 +94,11 @@ public class XML_Generator
                 System.err.println("*** Smthing went wrong when sending request to LCSH ***");
                 e.printStackTrace();
             }
+            catch (StackOverflowError sto)
+            {
+                System.err.println("@@@@@ Problematic term with possible circle in the path @@@@@");
+                System.err.println("@@@@@ Movin on to the next one @@@@@");
+                continue;}
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -104,7 +113,7 @@ public class XML_Generator
         outputStream.close();
     }
 
-    private static void getProposedTargets(HttpClient client, EKT_UNESCO_Label UNESCO_label, Sheet spreadsheet, int rowNo) throws IOException, ParserConfigurationException, SAXException
+    private static void getProposedTargets(HttpClient client, EKT_UNESCO_Label UNESCO_label, Sheet spreadsheet, int rowNo) throws IOException, ParserConfigurationException, SAXException, StackOverflowError
     {
         //String uri = URLEncoder.encode(LCSHSEARCH_1+grLabel+LCSHSEARCH_2, StandardCharsets.UTF_8.toString());
         String uri = (LCSHSEARCH_1+UNESCO_label.label_en+LCSHSEARCH_2).replace(" ","%20");
@@ -137,7 +146,7 @@ public class XML_Generator
             cell.setCellValue(cellValues[i]);
         }
     }
-    private static ProposedTarget getProposedTargetDetails(Node entry)
+    private static ProposedTarget getProposedTargetDetails(Node entry) throws StackOverflowError
     {
         NodeList attrNodes = entry.getChildNodes();
         ProposedTarget propTarget = new ProposedTarget();
@@ -174,7 +183,19 @@ public class XML_Generator
 
     private static ProposedTarget swimUpRec(ProposedTarget propTarget)
     {
-        HttpClient client = HttpClients.custom().build();
+        HttpClient client = null;
+        try{
+            client = HttpClients.custom().build();
+        }catch(Exception whateva)
+        {
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            client = HttpClients.custom().build();
+        }
+
         Document proposedTargDoc = null;
         try {
             proposedTargDoc = HttpStuff.sendHttpRequest(client, propTarget.uri+".rdf", "application/xml");
