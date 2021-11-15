@@ -1,0 +1,331 @@
+
+--Sending request for Mobile homes.--
+https://id.loc.gov/search/?q=Mobile%20homes&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Mobile homes' has 20 proposed mappings.
+Dwellings/Mobile homes
+Buildings/Dwellings/Mobile homes
+Buildings/Buildings/Dwellings/Mobile homes
+http://id.loc.gov/authorities/subjects/sh90000997 ## Mobile homes ## Buildings/Buildings/Dwellings/Mobile homes
+Loop detected on Buildings/Buildings/Dwellings/Mobile homes. LCSH sucks...
+Mobile homes/Used mobile homes
+Dwellings/Mobile homes/Used mobile homes
+Buildings/Dwellings/Mobile homes/Used mobile homes
+Buildings/Buildings/Dwellings/Mobile homes/Used mobile homes
+http://id.loc.gov/authorities/subjects/sh90000997 ## Used mobile homes ## Buildings/Buildings/Dwellings/Mobile homes/Used mobile homes
+Loop detected on Buildings/Buildings/Dwellings/Mobile homes/Used mobile homes. LCSH sucks...
+Mobile homes/Mobile home living
+Dwellings/Mobile homes/Mobile home living
+Buildings/Dwellings/Mobile homes/Mobile home living
+Buildings/Buildings/Dwellings/Mobile homes/Mobile home living
+http://id.loc.gov/authorities/subjects/sh90000997 ## Mobile home living ## Buildings/Buildings/Dwellings/Mobile homes/Mobile home living
+Loop detected on Buildings/Buildings/Dwellings/Mobile homes/Mobile home living. LCSH sucks...
+Construction industry/Mobile home industry
+http://id.loc.gov/authorities/subjects/sh85031360 ## Mobile home industry ## Construction industry/Mobile home industry
+Trailer camps/Mobile home parks
+#####################
+#####################
+Something went wrong... when swimming to the surface... Aborting...
+#####################
+#####################
+http://id.loc.gov/authorities/subjects/sh85086374 ## Mobile home parks ## Mobile home parks
+--Sending request for Palaces.--
+https://id.loc.gov/search/?q=Palaces&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Palaces' has 20 proposed mappings.
+Buildings/Palaces
+Loop detected on Buildings/Buildings/Palaces. LCSH sucks...
+Buildings/Buildings/Palaces
+http://id.loc.gov/authorities/subjects/sh90000997 ## Palaces ## Buildings/Buildings/Palaces
+Homes and haunts/Palaces
+http://id.loc.gov/authorities/subjects/sh99005711 ## Palaces ## Homes and haunts/Palaces
+http://id.loc.gov/authorities/subjects/sh94007510 ## Palaces in literature ## Palaces in literature
+Motion pictures/Palaces in motion pictures
+Audio-visual materials/Motion pictures/Palaces in motion pictures
+Nonbook materials/Audio-visual materials/Motion pictures/Palaces in motion pictures
+Library materials/Nonbook materials/Audio-visual materials/Motion pictures/Palaces in motion pictures
+http://id.loc.gov/authorities/subjects/sh85076704 ## Palaces in motion pictures ## Library materials/Nonbook materials/Audio-visual materials/Motion pictures/Palaces in motion pictures
+http://id.loc.gov/authorities/subjects/sh97000105 ## Palaces in art ## Palaces in art
+--Sending request for Oceanographic laboratories.--
+https://id.loc.gov/search/?q=Oceanographic%20laboratories&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Oceanographic laboratories' has 1 proposed mappings.
+Observatories/Oceanographic research stations
+Buildings/Observatories/Oceanographic research stations
+Buildings/Buildings/Observatories/Oceanographic research stations
+http://id.loc.gov/authorities/subjects/sh90000997 ## Oceanographic research stations ## Buildings/Buildings/Observatories/Oceanographic research stations
+Loop detected on Buildings/Buildings/Observatories/Oceanographic research stations. LCSH sucks...
+--Sending request for Cooling systems.--
+https://id.loc.gov/search/?q=Cooling%20systems&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Cooling systems' has 12 proposed mappings.
+Cooling systems/Emergency core cooling systems
+Engineering systems/Cooling systems/Emergency core cooling systems
+Engineering/Engineering systems/Cooling systems/Emergency core cooling systems
+Industrial arts/Engineering/Engineering systems/Cooling systems/Emergency core cooling systems
+Handicraft/Industrial arts/Engineering/Engineering systems/Cooling systems/Emergency core cooling systems
+Occupations/Handicraft/Industrial arts/Engineering/Engineering systems/Cooling systems/Emergency core cooling systems
+http://id.loc.gov/authorities/subjects/sh85093862 ## Emergency core cooling systems ## Occupations/Handicraft/Industrial arts/Engineering/Engineering systems/Cooling systems/Emergency core cooling systems
+Solid fuel reactors/Pressurized water reactors
+Nuclear reactors/Solid fuel reactors/Pressurized water reactors
+Nuclear physics/Nuclear reactors/Solid fuel reactors/Pressurized water reactors
+Physics/Nuclear physics/Nuclear reactors/Solid fuel reactors/Pressurized water reactors
+Physical sciences/Physics/Nuclear physics/Nuclear reactors/Solid fuel reactors/Pressurized water reactors
+Science/Physical sciences/Physics/Nuclear physics/Nuclear reactors/Solid fuel reactors/Pressurized water reactors
+http://id.loc.gov/authorities/subjects/sh85118553 ## Pressurized water reactors ## Science/Physical sciences/Physics/Nuclear physics/Nuclear reactors/Solid fuel reactors/Pressurized water reactors
+Geothermal engineering/Ground source heat pump systems
+Engineering/Geothermal engineering/Ground source heat pump systems
+Industrial arts/Engineering/Geothermal engineering/Ground source heat pump systems
+Handicraft/Industrial arts/Engineering/Geothermal engineering/Ground source heat pump systems
+Occupations/Handicraft/Industrial arts/Engineering/Geothermal engineering/Ground source heat pump systems
+http://id.loc.gov/authorities/subjects/sh85093862 ## Ground source heat pump systems ## Occupations/Handicraft/Industrial arts/Engineering/Geothermal engineering/Ground source heat pump systems
+Engineering systems/Cooling systems
+Engineering/Engineering systems/Cooling systems
+Industrial arts/Engineering/Engineering systems/Cooling systems
+Handicraft/Industrial arts/Engineering/Engineering systems/Cooling systems
+Occupations/Handicraft/Industrial arts/Engineering/Engineering systems/Cooling systems
+http://id.loc.gov/authorities/subjects/sh85093862 ## Cooling systems ## Occupations/Handicraft/Industrial arts/Engineering/Engineering systems/Cooling systems
+Plumbing/Hydronics
+Domestic engineering/Plumbing/Hydronics
+Dwellings/Domestic engineering/Plumbing/Hydronics
+Buildings/Dwellings/Domestic engineering/Plumbing/Hydronics
+Buildings/Buildings/Dwellings/Domestic engineering/Plumbing/Hydronics
+http://id.loc.gov/authorities/subjects/sh90000997 ## Hydronics ## Buildings/Buildings/Dwellings/Domestic engineering/Plumbing/Hydronics
+Loop detected on Buildings/Buildings/Dwellings/Domestic engineering/Plumbing/Hydronics. LCSH sucks...
+--Sending request for Meteorological satellites.--
+https://id.loc.gov/search/?q=Meteorological%20satellites&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Meteorological satellites' has 4 proposed mappings.
+Scientific satellites/Meteorological satellites
+Observatories/Scientific satellites/Meteorological satellites
+Buildings/Observatories/Scientific satellites/Meteorological satellites
+Buildings/Buildings/Observatories/Scientific satellites/Meteorological satellites
+http://id.loc.gov/authorities/subjects/sh90000997 ## Meteorological satellites ## Buildings/Buildings/Observatories/Scientific satellites/Meteorological satellites
+Loop detected on Buildings/Buildings/Observatories/Scientific satellites/Meteorological satellites. LCSH sucks...
+Meteorological optics/Artificial satellites in meteorological optics
+Atmospheric physics/Meteorological optics/Artificial satellites in meteorological optics
+Atmospheric science/Atmospheric physics/Meteorological optics/Artificial satellites in meteorological optics
+Earth sciences/Atmospheric science/Atmospheric physics/Meteorological optics/Artificial satellites in meteorological optics
+Physical sciences/Earth sciences/Atmospheric science/Atmospheric physics/Meteorological optics/Artificial satellites in meteorological optics
+Science/Physical sciences/Earth sciences/Atmospheric science/Atmospheric physics/Meteorological optics/Artificial satellites in meteorological optics
+http://id.loc.gov/authorities/subjects/sh85118553 ## Artificial satellites in meteorological optics ## Science/Physical sciences/Earth sciences/Atmospheric science/Atmospheric physics/Meteorological optics/Artificial satellites in meteorological optics
+Meteorological satellites/TIROS satellites
+Scientific satellites/Meteorological satellites/TIROS satellites
+Observatories/Scientific satellites/Meteorological satellites/TIROS satellites
+Buildings/Observatories/Scientific satellites/Meteorological satellites/TIROS satellites
+Buildings/Buildings/Observatories/Scientific satellites/Meteorological satellites/TIROS satellites
+http://id.loc.gov/authorities/subjects/sh90000997 ## TIROS satellites ## Buildings/Buildings/Observatories/Scientific satellites/Meteorological satellites/TIROS satellites
+Loop detected on Buildings/Buildings/Observatories/Scientific satellites/Meteorological satellites/TIROS satellites. LCSH sucks...
+http://id.loc.gov/authorities/subjects/sh2010006965 ## Meteorological satellites--Calibration ## Meteorological satellites--Calibration
+--Sending request for Family.--
+https://id.loc.gov/search/?q=Family&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Family' has 20 proposed mappings.
+http://id.loc.gov/authorities/subjects/sh00005743 ## Family ## Family
+http://id.loc.gov/authorities/subjects/sh2006003280 ## Burkin family ## Burkin family
+Dwellings/Housing, Single family
+Buildings/Dwellings/Housing, Single family
+Buildings/Buildings/Dwellings/Housing, Single family
+http://id.loc.gov/authorities/subjects/sh90000997 ## Housing, Single family ## Buildings/Buildings/Dwellings/Housing, Single family
+Loop detected on Buildings/Buildings/Dwellings/Housing, Single family. LCSH sucks...
+http://id.loc.gov/authorities/subjects/sh99014569 ## Logan family (Fictitious characters : Andrews) ## Logan family (Fictitious characters : Andrews)
+Protein-tyrosine kinase/Src family kinases
+Protein kinases/Protein-tyrosine kinase/Src family kinases
+Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Chemical inhibitors/Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Chemicals/Chemical inhibitors/Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Chemistry/Chemicals/Chemical inhibitors/Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Physical sciences/Chemistry/Chemicals/Chemical inhibitors/Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+Science/Physical sciences/Chemistry/Chemicals/Chemical inhibitors/Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+http://id.loc.gov/authorities/subjects/sh85118553 ## Src family kinases ## Science/Physical sciences/Chemistry/Chemicals/Chemical inhibitors/Catalysts/Enzymes/Transferases/Phosphotransferases/Protein kinases/Protein-tyrosine kinase/Src family kinases
+--Sending request for Research laboratories.--
+https://id.loc.gov/search/?q=Research%20laboratories&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Research laboratories' has 11 proposed mappings.
+http://id.loc.gov/authorities/subjects/sh85073739 ## Laboratories ## Laboratories
+Agricultural laboratories/Soil laboratories
+Laboratories/Agricultural laboratories/Soil laboratories
+http://id.loc.gov/authorities/subjects/sh85073739 ## Soil laboratories ## Laboratories/Agricultural laboratories/Soil laboratories
+Agricultural laboratories/Forestry laboratories
+Laboratories/Agricultural laboratories/Forestry laboratories
+http://id.loc.gov/authorities/subjects/sh85073739 ## Forestry laboratories ## Laboratories/Agricultural laboratories/Forestry laboratories
+Laboratories/Fishery research stations
+http://id.loc.gov/authorities/subjects/sh85073739 ## Fishery research stations ## Laboratories/Fishery research stations
+Observatories/Oceanographic research stations
+Buildings/Observatories/Oceanographic research stations
+Buildings/Buildings/Observatories/Oceanographic research stations
+http://id.loc.gov/authorities/subjects/sh90000997 ## Oceanographic research stations ## Buildings/Buildings/Observatories/Oceanographic research stations
+Loop detected on Buildings/Buildings/Observatories/Oceanographic research stations. LCSH sucks...
+--Sending request for Railway stations.--
+https://id.loc.gov/search/?q=Railway%20stations&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Railway stations' has 20 proposed mappings.
+Railroads--Buildings and structures/Railroad stations
+Transportation buildings/Railroads--Buildings and structures/Railroad stations
+Buildings/Transportation buildings/Railroads--Buildings and structures/Railroad stations
+Buildings/Buildings/Transportation buildings/Railroads--Buildings and structures/Railroad stations
+http://id.loc.gov/authorities/subjects/sh90000997 ## Railroad stations ## Buildings/Buildings/Transportation buildings/Railroads--Buildings and structures/Railroad stations
+Loop detected on Buildings/Buildings/Transportation buildings/Railroads--Buildings and structures/Railroad stations. LCSH sucks...
+Railroad stations--England/Rose Grove Railway Station (Burnley, England)
+http://id.loc.gov/authorities/subjects/sh85111105 ## Rose Grove Railway Station (Burnley, England) ## Railroad stations--England/Rose Grove Railway Station (Burnley, England)
+Plazas--Finland/Rautatientori (Helsinki, Finland)
+http://id.loc.gov/authorities/subjects/sh2001006739 ## Rautatientori (Helsinki, Finland) ## Plazas--Finland/Rautatientori (Helsinki, Finland)
+Railroad stations--Australia/Central Railway Station (Sydney, N.S.W.)
+http://id.loc.gov/authorities/subjects/sh2010007224 ## Central Railway Station (Sydney, N.S.W.) ## Railroad stations--Australia/Central Railway Station (Sydney, N.S.W.)
+Railroad stations--Australia/Flinders Street Railway Station (Melbourne, Vic.)
+http://id.loc.gov/authorities/subjects/sh2010007224 ## Flinders Street Railway Station (Melbourne, Vic.) ## Railroad stations--Australia/Flinders Street Railway Station (Melbourne, Vic.)
+--Sending request for Seismological observatories.--
+https://id.loc.gov/search/?q=Seismological%20observatories&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Seismological observatories' has 1 proposed mappings.
+Geophysical observatories/Seismological stations
+Observatories/Geophysical observatories/Seismological stations
+Buildings/Observatories/Geophysical observatories/Seismological stations
+Buildings/Buildings/Observatories/Geophysical observatories/Seismological stations
+http://id.loc.gov/authorities/subjects/sh90000997 ## Seismological stations ## Buildings/Buildings/Observatories/Geophysical observatories/Seismological stations
+Loop detected on Buildings/Buildings/Observatories/Geophysical observatories/Seismological stations. LCSH sucks...
+--Sending request for Houses.--
+https://id.loc.gov/search/?q=Houses&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Houses' has 20 proposed mappings.
+House framing/Wooden-frame houses
+Framing (Building)/House framing/Wooden-frame houses
+Building/Framing (Building)/House framing/Wooden-frame houses
+Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Intellectual life/Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+http://id.loc.gov/authorities/subjects/sh85034755 ## Wooden-frame houses ## Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/House framing/Wooden-frame houses
+Church buildings/Quaker church buildings
+Church facilities/Church buildings/Quaker church buildings
+Religious facilities/Church facilities/Church buildings/Quaker church buildings
+http://id.loc.gov/authorities/subjects/sh97004247 ## Quaker church buildings ## Religious facilities/Church facilities/Church buildings/Quaker church buildings
+Miniature objects/Dollhouses
+Art objects/Miniature objects/Dollhouses
+Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Arts/Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Humanities/Arts/Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Intellectual life/Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+http://id.loc.gov/authorities/subjects/sh85034755 ## Dollhouses ## Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Art objects/Miniature objects/Dollhouses
+Interior decoration/Decorator showhouses
+Decoration and ornament/Interior decoration/Decorator showhouses
+Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Arts/Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Humanities/Arts/Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Intellectual life/Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+http://id.loc.gov/authorities/subjects/sh85034755 ## Decorator showhouses ## Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Decorative arts/Decoration and ornament/Interior decoration/Decorator showhouses
+Huts/Fishing huts
+Dwellings/Huts/Fishing huts
+Buildings/Dwellings/Huts/Fishing huts
+Buildings/Buildings/Dwellings/Huts/Fishing huts
+http://id.loc.gov/authorities/subjects/sh90000997 ## Fishing huts ## Buildings/Buildings/Dwellings/Huts/Fishing huts
+Loop detected on Buildings/Buildings/Dwellings/Huts/Fishing huts. LCSH sucks...
+--Sending request for Buildings.--
+https://id.loc.gov/search/?q=Buildings&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Buildings' has 20 proposed mappings.
+http://id.loc.gov/authorities/subjects/sh85017769 ## Buildings ## Buildings
+http://id.loc.gov/authorities/subjects/sh99004819 ## Buildings ## Buildings
+Framing (Building)/Wooden-frame buildings
+Building/Framing (Building)/Wooden-frame buildings
+Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Intellectual life/Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+http://id.loc.gov/authorities/subjects/sh85034755 ## Wooden-frame buildings ## Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Art/Architecture/Structural engineering/Building/Framing (Building)/Wooden-frame buildings
+Buildings/Tall buildings
+Buildings/Buildings/Tall buildings
+http://id.loc.gov/authorities/subjects/sh90000997 ## Tall buildings ## Buildings/Buildings/Tall buildings
+Loop detected on Buildings/Buildings/Tall buildings. LCSH sucks...
+Buildings/Multipurpose buildings
+Buildings/Buildings/Multipurpose buildings
+http://id.loc.gov/authorities/subjects/sh90000997 ## Multipurpose buildings ## Buildings/Buildings/Multipurpose buildings
+Loop detected on Buildings/Buildings/Multipurpose buildings. LCSH sucks...
+--Sending request for Handicrafts.--
+https://id.loc.gov/search/?q=Handicrafts&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Handicrafts' has 14 proposed mappings.
+Jewish art and symbolism/Jewish crafts
+Jewish arts/Jewish art and symbolism/Jewish crafts
+Arts/Jewish arts/Jewish art and symbolism/Jewish crafts
+Humanities/Arts/Jewish arts/Jewish art and symbolism/Jewish crafts
+Learning and scholarship/Humanities/Arts/Jewish arts/Jewish art and symbolism/Jewish crafts
+Intellectual life/Learning and scholarship/Humanities/Arts/Jewish arts/Jewish art and symbolism/Jewish crafts
+Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Jewish arts/Jewish art and symbolism/Jewish crafts
+http://id.loc.gov/authorities/subjects/sh85034755 ## Jewish crafts ## Culture/Intellectual life/Learning and scholarship/Humanities/Arts/Jewish arts/Jewish art and symbolism/Jewish crafts
+Occupations/Handicraft
+http://id.loc.gov/authorities/subjects/sh85093862 ## Handicraft ## Occupations/Handicraft
+People with disabilities/Handicraft for people with disabilities
+Persons/People with disabilities/Handicraft for people with disabilities
+http://id.loc.gov/authorities/subjects/sh85100163 ## Handicraft for people with disabilities ## Persons/People with disabilities/Handicraft for people with disabilities
+People with mental disabilities/Handicraft for people with mental disabilities
+People with disabilities/People with mental disabilities/Handicraft for people with mental disabilities
+Persons/People with disabilities/People with mental disabilities/Handicraft for people with mental disabilities
+http://id.loc.gov/authorities/subjects/sh85100163 ## Handicraft for people with mental disabilities ## Persons/People with disabilities/People with mental disabilities/Handicraft for people with mental disabilities
+Specialty stores/Craft shops
+Stores, Retail/Specialty stores/Craft shops
+Commercial buildings/Stores, Retail/Specialty stores/Craft shops
+Buildings/Commercial buildings/Stores, Retail/Specialty stores/Craft shops
+Loop detected on Buildings/Buildings/Commercial buildings/Stores, Retail/Specialty stores/Craft shops. LCSH sucks...
+Buildings/Buildings/Commercial buildings/Stores, Retail/Specialty stores/Craft shops
+http://id.loc.gov/authorities/subjects/sh90000997 ## Craft shops ## Buildings/Buildings/Commercial buildings/Stores, Retail/Specialty stores/Craft shops
+--Sending request for Industrial plants.--
+https://id.loc.gov/search/?q=Industrial%20plants&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Industrial plants' has 7 proposed mappings.
+Industrial buildings/Factories
+Buildings/Industrial buildings/Factories
+Buildings/Buildings/Industrial buildings/Factories
+http://id.loc.gov/authorities/subjects/sh90000997 ## Factories ## Buildings/Buildings/Industrial buildings/Factories
+Loop detected on Buildings/Buildings/Industrial buildings/Factories. LCSH sucks...
+Plants, Cultivated/Crops
+Plant introduction/Plants, Cultivated/Crops
+Phytogeography/Plant introduction/Plants, Cultivated/Crops
+Biogeography/Phytogeography/Plant introduction/Plants, Cultivated/Crops
+Geography/Biogeography/Phytogeography/Plant introduction/Plants, Cultivated/Crops
+Cosmography/Geography/Biogeography/Phytogeography/Plant introduction/Plants, Cultivated/Crops
+Cosmology/Cosmography/Geography/Biogeography/Phytogeography/Plant introduction/Plants, Cultivated/Crops
+Deism/Cosmology/Cosmography/Geography/Biogeography/Phytogeography/Plant introduction/Plants, Cultivated/Crops
+http://id.loc.gov/authorities/subjects/sh85036505 ## Crops ## Deism/Cosmology/Cosmography/Geography/Biogeography/Phytogeography/Plant introduction/Plants, Cultivated/Crops
+Plant engineering/Plant maintenance
+Engineering/Plant engineering/Plant maintenance
+Industrial arts/Engineering/Plant engineering/Plant maintenance
+Handicraft/Industrial arts/Engineering/Plant engineering/Plant maintenance
+Occupations/Handicraft/Industrial arts/Engineering/Plant engineering/Plant maintenance
+http://id.loc.gov/authorities/subjects/sh85093862 ## Plant maintenance ## Occupations/Handicraft/Industrial arts/Engineering/Plant engineering/Plant maintenance
+Fieldwork (Educational method)/Industrial tours
+Teaching/Fieldwork (Educational method)/Industrial tours
+http://id.loc.gov/authorities/subjects/sh85133052 ## Industrial tours ## Teaching/Fieldwork (Educational method)/Industrial tours
+Regional planning/Industrial location
+Land use--Planning/Regional planning/Industrial location
+http://id.loc.gov/authorities/subjects/sh85074348 ## Industrial location ## Land use--Planning/Regional planning/Industrial location
+--Sending request for Astronomical observatories.--
+https://id.loc.gov/search/?q=Astronomical%20observatories&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+Label 'Astronomical observatories' has 4 proposed mappings.
+Astronomical observatories/Orbiting astronomical observatories
+Observatories/Astronomical observatories/Orbiting astronomical observatories
+Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories
+Buildings/Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories
+http://id.loc.gov/authorities/subjects/sh90000997 ## Orbiting astronomical observatories ## Buildings/Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories
+Loop detected on Buildings/Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories. LCSH sucks...
+Observatories/Astronomical observatories
+Buildings/Observatories/Astronomical observatories
+Buildings/Buildings/Observatories/Astronomical observatories
+http://id.loc.gov/authorities/subjects/sh90000997 ## Astronomical observatories ## Buildings/Buildings/Observatories/Astronomical observatories
+Loop detected on Buildings/Buildings/Observatories/Astronomical observatories. LCSH sucks...
+Orbiting astronomical observatories/High Energy Astronomy Observatories
+Astronomical observatories/Orbiting astronomical observatories/High Energy Astronomy Observatories
+Observatories/Astronomical observatories/Orbiting astronomical observatories/High Energy Astronomy Observatories
+Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories/High Energy Astronomy Observatories
+Buildings/Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories/High Energy Astronomy Observatories
+http://id.loc.gov/authorities/subjects/sh90000997 ## High Energy Astronomy Observatories ## Buildings/Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories/High Energy Astronomy Observatories
+Loop detected on Buildings/Buildings/Observatories/Astronomical observatories/Orbiting astronomical observatories/High Energy Astronomy Observatories. LCSH sucks...
+http://id.loc.gov/authorities/subjects/sh2010104506 ## Orbiting astronomical observatories--Congresses ## Orbiting astronomical observatories--Congresses
+
+Process finished with exit code 0
+

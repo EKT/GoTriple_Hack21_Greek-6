@@ -35,6 +35,8 @@ public class XML_Generator
     private static final String LCSHSEARCH_1 = "https://id.loc.gov/search/?q=";
     private static final String LCSHSEARCH_2 = "&q=scheme:http://id.loc.gov/authorities/subjects&format=atom";
     private static GR_2_EN_Labels gr_2_en_labels;// = new GR_2_EN_Labels();
+    private static int countAllMappings;
+    private static int countThoseWithoutMap;
 
     public static void main(String[] args)
     {
@@ -49,13 +51,18 @@ public class XML_Generator
         //String XLSXOutput = thisDirectory+"/Mappings2.xlsx";
         //String XLSXOutput = thisDirectory+"/Mappings3.xlsx";
         //String XLSXOutput = thisDirectory+"/Mappings4.xlsx";
-        String XLSXOutput = thisDirectory+"/Mappings5.xlsx";
+        //String XLSXOutput = thisDirectory+"/Mappings5.xlsx";
         //String XLSXOutput = thisDirectory+"/MappingsSmall.xlsx";
+        //String XLSXOutput = thisDirectory+"/MappingsProblematic.xlsx";
+        String XLSXOutput = thisDirectory+"/MappingsNEW.xlsx";
+        countAllMappings=0;
+        countThoseWithoutMap=0;
         try {
             generateXML(XLSXOutput);
         } catch (IOException | InvalidFormatException e) {
             e.printStackTrace();
         }
+        System.out.println("We are DONE. Got "+countAllMappings+" but for "+countThoseWithoutMap+" of these there we no mappings found...");
     }
 
     private static void generateXML(String xlsx) throws IOException, InvalidFormatException
@@ -121,7 +128,9 @@ public class XML_Generator
         Document doc = HttpStuff.sendHttpRequest(client, uri, "application/atom");
         NodeList entries = doc.getElementsByTagName("entry");
         System.out.println("Label '"+UNESCO_label.label_en+"' has "+entries.getLength()+" proposed mappings.");
-        //System.out.println();
+        countAllMappings++;
+        if (entries.getLength()==0)
+            countThoseWithoutMap++;
         int countProposedMaps = 0;
         Row nextRow = spreadsheet.createRow(rowNo);
         writeThreeCells(0, new String[]{uri,UNESCO_label.path_gr, UNESCO_label.path_en}, nextRow);
@@ -151,6 +160,7 @@ public class XML_Generator
         NodeList attrNodes = entry.getChildNodes();
         ProposedTarget propTarget = new ProposedTarget();
         String saveTargetTitle = null;
+        String saveTargetUri = null;
         for (int i=0; i<attrNodes.getLength(); i++)
         {
             if (attrNodes.item(i).getNodeName().equals("title"))
@@ -164,7 +174,10 @@ public class XML_Generator
                 NamedNodeMap attrs = attrNodes.item(i).getAttributes();
                 Node attrNotNeeded = attrs.getNamedItem("type");
                 if (attrNotNeeded == null)
+                {
                     propTarget.uri = attrs.getNamedItem("href").getNodeValue();
+                    saveTargetUri = propTarget.uri;
+                }
             }
         }
         //lets now find its path... swimming up to its parents...
@@ -177,6 +190,7 @@ public class XML_Generator
             System.err.println("#####################");
             System.err.println("#####################");}
         propTarget.title=saveTargetTitle;
+        propTarget.uri=saveTargetUri;
         System.out.println(propTarget);
         return propTarget;
     }
@@ -222,6 +236,12 @@ public class XML_Generator
                 {
                     propParentTarget.title=descriptionNodeChildren.item(jj).getTextContent();
                     propParentTarget.path=propParentTarget.title+"/"+propTarget.path;
+                    //System.out.println(propParentTarget.path);
+                    if (propParentTarget.path.endsWith("/"+propParentTarget.title) || propParentTarget.path.contains("/"+propParentTarget.title+"/"))
+                    {
+                        System.err.println("Loop detected on "+propParentTarget.path+". LCSH sucks...");
+                        return propParentTarget;
+                    }
                 }
             return swimUpRec(propParentTarget);
         }
