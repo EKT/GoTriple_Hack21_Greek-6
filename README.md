@@ -17,6 +17,8 @@ The list in JSON is actually an SSH terms subset of the EKT-UNESCO Thesaurus.
 The system takes as input the JSON with the greek terms. It iterates them one-by-one and gets their corresponding resource in the Thesaurus. Even though there is an [API](https://www.semantics.gr/authorities/swagger-ui.html) for the Thesaurus we prefered to download it in XML format and keep it in our disk instead. For every greek term that is to be mapped to the LCSH the system sends a search request to the API of LC. For example, for the term "Festival" it sends the HTTP request
 ```shell
 https://id.loc.gov/search/?q=Festivals&q=scheme:http://id.loc.gov/authorities/subjects&format=atom
+```
 which is the XML result of the search: 
 ```shell
 https://id.loc.gov/search/?q=Festivals&q=scheme:http://id.loc.gov/authorities/subjects
+```
