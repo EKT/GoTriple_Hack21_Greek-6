@@ -18,7 +18,7 @@ import java.util.*;
 public class GR_2_EN_Labels
 {
     public LinkedHashSet<String> GR_Labels = new LinkedHashSet<String>();
-    public HashMap<String, EKT_UNESCO_Label> EKT_UNESCO_OfOurInterest = new HashMap<String, EKT_UNESCO_Label>();//edw vazoume ta filtered fulla pou einai gia mapping. key: to lektiko tous sta ellhnika opws einai kai sto JSON
+    public HashMap<String, EKT_UNESCO_Label> EKT_UNESCO_OfOurInterest = new HashMap<String, EKT_UNESCO_Label>();//edw vazoume ta filtered Nodes pou einai gia mapping. key: to lektiko tous sta ellhnika opws einai kai sto JSON
     private HashMap<String, Node> EKT_UNESCO_Nodes = new HashMap<String, Node>();//all Nodes in the XML. key: URI
     private String thisDirectory = new File("").getAbsolutePath();
     private Node ekt_unesco_root;
@@ -30,13 +30,7 @@ public class GR_2_EN_Labels
     }
     private void loadGreekJson() throws IOException, ParseException
     {
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH.json");
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_1.json");
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_2.json");
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_3.json");
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_4.json");
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_5.json");
-        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_TESTTT.json");
+        //Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH_NEW_TEST.json");
         //Reader readerSubset = new FileReader(thisDirectory+"/problematicTerms.json");
         Reader readerSubset = new FileReader(thisDirectory+"/3.greek_multidiscipline_SSH.json");
         JSONParser jsonParser = new JSONParser();
@@ -69,7 +63,7 @@ public class GR_2_EN_Labels
             EKT_UNESCO_Nodes.put(uri, nodeXML);
         }
         int countNotInterested=0;
-        for (Map.Entry<String, Node> entry: EKT_UNESCO_Nodes.entrySet())//second iteration, selecting only the leaves and finding their full path from the root
+        for (Map.Entry<String, Node> entry: EKT_UNESCO_Nodes.entrySet())//second iteration... finding the full path from the root for every node (leaf or intermediate)
         {
             Node node = entry.getValue();
             NodeList attr_nodes = node.getChildNodes();
@@ -81,12 +75,12 @@ public class GR_2_EN_Labels
             {
                 String lang=null; String label=null;
                 attrNode = attr_nodes.item(i);
-                if (attrNode.getNodeName().equals("skos:narrower"))
+                /*if (attrNode.getNodeName().equals("skos:narrower"))
                 {
                     foundNarrower = true;
                     break;
-                }
-                else if (attrNode.getNodeName().equals("skos:prefLabel"))
+                }*/
+                /*else*/ if (attrNode.getNodeName().equals("skos:prefLabel"))
                 {
                     lang = attrNode.getAttributes().item(0).getNodeValue();
                     label = attrNode.getTextContent();
@@ -104,7 +98,7 @@ public class GR_2_EN_Labels
                 continue;
             }
             EKT_UNESCO_Label ekt_unesco_interesting = new EKT_UNESCO_Label(node, entry.getKey(), labelGr, labelEn);
-            HashMap<String, String> gr_en_path = getLeafsPath(EKT_UNESCO_Nodes.get(entry.getKey()));
+            HashMap<String, String> gr_en_path = getNodesPath(EKT_UNESCO_Nodes.get(entry.getKey()));
             ekt_unesco_interesting.path_gr = gr_en_path.get("el");
             ekt_unesco_interesting.path_en = gr_en_path.get("en");
 
@@ -113,13 +107,13 @@ public class GR_2_EN_Labels
         System.out.println("$$ We ignored "+countNotInterested+" EKT-UNESCO labels (leaves or not) $$");
     }
 
-    private HashMap<String, String> getLeafsPath(Node leafNode)
+    private HashMap<String, String> getNodesPath(Node leafNode)
     {
         HashMap<String, String> initialPath = getGR_ENPrefLabels(leafNode);
         //GR_EN_Path gr_en_path = new GR_EN_Path(initialGRPath, initialENPath);
-        return getLeafsPathRec(leafNode, initialPath);
+        return getNodesPathRec(leafNode, initialPath);
     }
-    private HashMap<String, String> getLeafsPathRec(Node node, HashMap<String, String> gr_en_path)
+    private HashMap<String, String> getNodesPathRec(Node node, HashMap<String, String> gr_en_path)
     {
         NodeList attrNodes = node.getChildNodes();
         boolean foundBroader = false;
@@ -137,7 +131,7 @@ public class GR_2_EN_Labels
             }
         }
         if (foundBroader)
-            return getLeafsPathRec(parent, gr_en_path);
+            return getNodesPathRec(parent, gr_en_path);
         return gr_en_path;
     }
     private HashMap<String, String> getGR_ENPrefLabels(Node node)

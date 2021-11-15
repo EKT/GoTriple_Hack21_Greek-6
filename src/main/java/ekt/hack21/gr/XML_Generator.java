@@ -1,32 +1,18 @@
 package ekt.hack21.gr;
 
-import org.apache.http.util.EntityUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.simple.parser.ParseException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
-
-import org.apache.http.HttpHeaders;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.impl.client.HttpClients;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class XML_Generator
@@ -47,14 +33,10 @@ public class XML_Generator
         catch (IOException | ParseException e) {e.printStackTrace();}
         catch (ParserConfigurationException e) {e.printStackTrace();}
         catch (SAXException e) {e.printStackTrace();}
-        //String XLSXOutput = thisDirectory+"/Mappings1.xlsx";
-        //String XLSXOutput = thisDirectory+"/Mappings2.xlsx";
-        //String XLSXOutput = thisDirectory+"/Mappings3.xlsx";
-        //String XLSXOutput = thisDirectory+"/Mappings4.xlsx";
-        //String XLSXOutput = thisDirectory+"/Mappings5.xlsx";
         //String XLSXOutput = thisDirectory+"/MappingsSmall.xlsx";
         //String XLSXOutput = thisDirectory+"/MappingsProblematic.xlsx";
-        String XLSXOutput = thisDirectory+"/MappingsNEW.xlsx";
+        //String XLSXOutput = thisDirectory+"/MappingsNEW.xlsx";
+        String XLSXOutput = thisDirectory+"/MappingsNEW_plus2initialColumns.xlsx";
         countAllMappings=0;
         countThoseWithoutMap=0;
         try {
@@ -77,15 +59,11 @@ public class XML_Generator
         {
             EKT_UNESCO_Label nextUNESCOLabel = gr_2_en_labels.EKT_UNESCO_OfOurInterest.get(greekLabels.next());
             String nextEn = nextUNESCOLabel.label_en;
-
             client = HttpClients.custom().build();
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            try {Thread.sleep(100);
+            } catch (InterruptedException e) {e.printStackTrace();}
             System.out.println("--Sending request for "+nextEn+".--");
-            if (nextEn.contains("(software)"))
+            if (nextEn.contains("(software)"))//bad code... made it specially for the two Information Technology terms...
                 nextEn="software";
             else if (nextEn.contains("(hardware)"))
                 nextEn="hardware";
@@ -123,9 +101,9 @@ public class XML_Generator
     private static void getProposedTargets(HttpClient client, EKT_UNESCO_Label UNESCO_label, Sheet spreadsheet, int rowNo) throws IOException, ParserConfigurationException, SAXException, StackOverflowError
     {
         //String uri = URLEncoder.encode(LCSHSEARCH_1+grLabel+LCSHSEARCH_2, StandardCharsets.UTF_8.toString());
-        String uri = (LCSHSEARCH_1+UNESCO_label.label_en+LCSHSEARCH_2).replace(" ","%20");
-        System.out.println(uri);
-        Document doc = HttpStuff.sendHttpRequest(client, uri, "application/atom");
+        String lcshSearch = (LCSHSEARCH_1+UNESCO_label.label_en+LCSHSEARCH_2).replace(" ","%20");
+        System.out.println(lcshSearch);
+        Document doc = HttpStuff.sendHttpRequest(client, lcshSearch, "application/atom");
         NodeList entries = doc.getElementsByTagName("entry");
         System.out.println("Label '"+UNESCO_label.label_en+"' has "+entries.getLength()+" proposed mappings.");
         countAllMappings++;
@@ -133,14 +111,18 @@ public class XML_Generator
             countThoseWithoutMap++;
         int countProposedMaps = 0;
         Row nextRow = spreadsheet.createRow(rowNo);
-        writeThreeCells(0, new String[]{uri,UNESCO_label.path_gr, UNESCO_label.path_en}, nextRow);
+        Cell cellJSONGRTerm = nextRow.createCell(0);
+        cellJSONGRTerm.setCellValue(UNESCO_label.label_gr);
+        Cell cellURI = nextRow.createCell(1);
+        cellURI.setCellValue(UNESCO_label.URI);//semantics EKT-UNESCO uri
+        writeThreeCells(2, new String[]{lcshSearch,UNESCO_label.path_gr, UNESCO_label.path_en}, nextRow);
         while (countProposedMaps < entries.getLength() && countProposedMaps < 5)
         {
             Node entry = entries.item(countProposedMaps);
             ProposedTarget propTarg = getProposedTargetDetails(entry);
             //write it down to the Excel
             //System.out.println("WRITE DOWN:'"+propTarg.uri+"'-enaDyoEna'-"+propTarg.path);
-            writeThreeCells(4*(countProposedMaps+1), new String[]{propTarg.uri, "", propTarg.path}, nextRow);
+            writeThreeCells(2+4*(countProposedMaps+1), new String[]{propTarg.uri, "", propTarg.path}, nextRow);
 
             countProposedMaps++;
         }
